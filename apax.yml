@@ -1,0 +1,50 @@
+# General information
+name: "@simatic-ax/conveyor"
+version: 0.0.0-placeholder
+author: Siemens AG
+# Description will be displayed in the apax extension
+description: A comprehensive conveyor system library for SIMATIC AX providing standardized transport module functionality with automatic startup, operating modes, and material flow control.
+type: lib
+#URL to the repository
+repository:
+  type: git
+  url: https://github.com/simatic-ax/conveyor
+# Environment variables
+variables:
+  APAX_BUILD_ARGS:
+    - '--log Trace'
+    - '--simulation'
+    - '--debug'
+targets:
+  - 's7'
+  - 'llvm'
+# Dependencies
+devDependencies:
+  '@ax/sdk': ^2510.20.0
+  "@simatic-ax/snippetscollection": ^1.1.0
+  "@ax/axunit-mocking": ^9.6.6
+# Registry information, where the package will be published
+registries:
+  '@simatic-ax': 'https://npm.pkg.github.com/'
+# The public key to verify dependencies coming from the GitHub community. This ensures, that the package is
+# not tampered with.
+publicKeys:
+  "@simatic-ax":
+    "v1": "3792a7e926775425ccdd29ceed8c368c3008b5b33d7d5550b3cb1f58093e1dff"
+    "v2": "7af3e394eb2b285a3d99ab8e1f745cc6db75704b30a80393339c721a92ffffd9"
+
+# Files, which will be shipped with the library
+files:
+  - 'README.md'
+  - 'LICENSE.md'
+  - 'docs'
+  - 'snippets'
+  - 'bin/s7'
+  - 'bin/llvm'
+dependencies:
+  "@simatic-ax/io": ^11.0.0
+  "@ax/system-timer": ^10.4.66
+  "@simatic-ax/automationbase": ^1.0.1
+  "@ax/simatic-clocks": ^11.0.116
+catalogs:
+  "@ax/simatic-ax": ^2510.0.0

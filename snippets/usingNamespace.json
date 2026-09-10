@@ -1,0 +1,11 @@
+{
+    "USINGAxUnit": {
+    "scope": "javascript,typescript,st",
+    "prefix": ["USING Conveyor"],
+    "body": [
+        "USING Simatic.Ax.Conveyor;",
+        "$0"
+    ],
+    "description": "Create USING for your Conveyor library;"
+    }    
+}
